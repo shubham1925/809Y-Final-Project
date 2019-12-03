@@ -1,0 +1,6 @@
+<map id="fp::API::setColor" name="fp::API::setColor">
+<area shape="rect" id="node1" title="It is a function of class API. It is used to set the color of the coordinate block of the maze in the..." alt="" coords="436,56,556,83"/>
+<area shape="rect" id="node2" href="$classfp_1_1_maze.html#af090b97595ed34cad9f7c8de9e79a127" title="This constructor is used to initialize all the walls to zero." alt="" coords="246,5,359,32"/>
+<area shape="rect" id="node3" href="$classfp_1_1_algorithm.html#ab93794edf5f04ad4418fb6aa8cd8233f" title="This function is used to move the robot through the maze." alt="" coords="217,56,388,83"/>
+<area shape="rect" id="node4" href="$classfp_1_1_algorithm.html#abf53bf1b6898769a79872dd38549b3f9" title="This is a function that implements Depth First Search Algorithm." alt="" coords="5,81,169,108"/>
+</map>

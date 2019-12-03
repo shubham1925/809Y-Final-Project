@@ -1,5 +1,5 @@
 /**
- * @file landbasedrobot.h
+ * @file algorithm.h
  * @authors
  * Group 5 
 * 
@@ -20,8 +20,8 @@
 *
 * @section DESCRIPTION
 * 
-* This is an abstract class whose attributes and methods are used by 
-* the derived classes, namely LandBasedWheeled and LandBasedTracked.
+* This class is used to implement the Depth First Search 
+* algorithm and navigate the robot through the maze. 
 *                                                                                               
 * 
 */
@@ -59,7 +59,8 @@ class Algorithm
         
     public:
 		/**
-		* @brief ------------------????
+		* @brief This is a no parameter constructor of Algorithm class. 
+		* It is used to initialize the required stacks and arrays.
 		* @param none
 		* @return none
 		*/
@@ -73,25 +74,28 @@ class Algorithm
 			cs.push(c);
 				
 		}
-        // For checking if the goal is reached or not
+        
 		/**
-		* @brief ------------------????
-		* @param none
-		* @return none
+		* @brief -This is a boolean function to check if the Goal is reached.
+		* @param x-coordinate of the robot.
+		* @param y-coordinate of the robot.
+		* @return It returns True if the goal is reached and False otherwise.
 		*/
         bool CheckGoal(int, int);
-        // Heart of the BFS Algorithm with back-tracking
+        
 		/**
-		* @brief ------------------????
-		* @param none
+		* @brief This is a function that implements Depth First Search Algorithm.
+		* @param Shared pointer to the robot class.
 		* @return none
 		*/
         void SolveDFS(std::shared_ptr<fp::LandBasedRobot>);
-        // Method for moving robot after finding path with BFS
+        
 
 		/**
-		* @brief ------------------????
-		* @param none
+		* @brief This function is used to move the robot through the maze.
+		* @param Shared pointer to the robot class.
+		* @param Robot x-coordinate.
+		* @param Robot y- coordinate.
 		* @return none
 		*/
         void MoveRobot(std::shared_ptr<fp::LandBasedRobot> robot,int r,int c);

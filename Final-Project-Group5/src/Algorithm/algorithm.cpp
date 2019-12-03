@@ -1,6 +1,8 @@
 #include "algorithm.h"
 #include <stack> 
 #include <array> 
+
+//Check if the Goal is reached.
 bool fp::Algorithm::CheckGoal(int x, int y) 
 	{
 		if((x == 7 && y == 7) || (x == 8 && y == 8) || (x == 7 && y == 8) || (x == 8 && y == 7))
@@ -8,7 +10,7 @@ bool fp::Algorithm::CheckGoal(int x, int y)
 		return false;
 	}
 
-
+// Implementing the Depth First Search Algorithm.
 void fp::Algorithm::SolveDFS(std::shared_ptr<fp::LandBasedRobot> robot) 
 {
     
@@ -17,11 +19,11 @@ void fp::Algorithm::SolveDFS(std::shared_ptr<fp::LandBasedRobot> robot)
 
     if(fp::Algorithm::CheckGoal(c, r))
 		{	
-			std::cerr<<"goal found"<<std::endl; 
+			
 			
 			while (!rs.empty()) 
 				{ 
-					fp::API::setColor(cs.top(), rs.top(), 'C');
+					fp::API::setColor(cs.top(), rs.top(), 'G');
 					rs.pop(); 
 					cs.pop();
 				} 
@@ -30,14 +32,12 @@ void fp::Algorithm::SolveDFS(std::shared_ptr<fp::LandBasedRobot> robot)
 		
     maze.UpdateWall(c,r,dir);
 	
-//    std::cerr<<"East Wall 1,0: "<<maze.ReadWallEast(1, 0)<<std::endl; 
-//    std::cerr<<"East Wall: "<< maze.ReadWallEast(c, r) << "\t " << c <<" " << r << " " << dir << fp::API::wallLeft() <<std::endl; 
 	
 	// Check South Direction
     if((maze.ReadWallSouth(c, r) == false)&&(visited[c][r-1]==false)&&(r>0))
     
 		{
-			//std::cerr<<"S"<<std::endl;
+			
 			rs.push(r-1);
 			cs.push(c);
 			fp::Algorithm::MoveRobot(robot,r-1,c);
@@ -52,8 +52,7 @@ void fp::Algorithm::SolveDFS(std::shared_ptr<fp::LandBasedRobot> robot)
     else if((maze.ReadWallEast(c, r) == false)&&(visited[c+1][r]==false)&&(c<15))
 
 		{              
-                 
-			//std::cerr<<"E"<<std::endl;
+               
 			rs.push(r);
 			cs.push(c+1);
 			fp::Algorithm::MoveRobot(robot,r,c+1);
@@ -67,7 +66,7 @@ void fp::Algorithm::SolveDFS(std::shared_ptr<fp::LandBasedRobot> robot)
     else if((maze.ReadWallNorth(c, r) == false)&&(visited[c][r+1]==false)&&(r<15))
            
 		{
-			//std::cerr<<"N"<<std::endl;
+			
 			rs.push(r+1);
 			cs.push(c);
 			fp::Algorithm::MoveRobot(robot,r+1,c);
@@ -81,7 +80,7 @@ void fp::Algorithm::SolveDFS(std::shared_ptr<fp::LandBasedRobot> robot)
     else if((maze.ReadWallWest(c, r) == false)&&(visited[c-1][r]==false)&&(c>0))
              
 		{
-			//std::cerr<<"W"<<std::endl;
+			
 			rs.push(r);
 			cs.push(c-1);
 			fp::Algorithm::MoveRobot(robot,r,c-1);
@@ -103,13 +102,14 @@ void fp::Algorithm::SolveDFS(std::shared_ptr<fp::LandBasedRobot> robot)
 			fp::Algorithm::SolveDFS(robot);
         }
 }
-
+// Moving the robot through the maze.
 void fp::Algorithm::MoveRobot(std::shared_ptr<fp::LandBasedRobot> robot,int r,int c) 
 {
     
     int curr_x=robot->get_x();
     int curr_y=robot->get_y();
     int curr_dir=robot->GetDirection();
+	fp::API::setColor(robot->get_x(),robot->get_y(),'Y');
     if(!((curr_y==r)&&(curr_x==c)))
     {	
 		//Movement in North direction.

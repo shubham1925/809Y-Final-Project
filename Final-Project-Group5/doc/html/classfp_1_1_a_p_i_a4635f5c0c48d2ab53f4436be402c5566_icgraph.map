@@ -1,0 +1,4 @@
+<map id="fp::API::setText" name="fp::API::setText">
+<area shape="rect" id="node1" title="It is a function of class API. It is used to assign text to coordinate on the maze...." alt="" coords="167,5,281,32"/>
+<area shape="rect" id="node2" href="$classfp_1_1_maze.html#af090b97595ed34cad9f7c8de9e79a127" title="This constructor is used to initialize all the walls to zero." alt="" coords="5,5,119,32"/>
+</map>

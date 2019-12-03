@@ -1,5 +1,5 @@
 /**
- * @file landbasedrobot.h
+ * @file api.h
  * @authors
  * Group 5 
 * 
@@ -20,8 +20,8 @@
 *
 * @section DESCRIPTION
 * 
-* This is an abstract class whose attributes and methods are used by 
-* the derived classes, namely LandBasedWheeled and LandBasedTracked.
+* This class is used as an Application Programmable Interface between the 
+* micromouse simulator and the used defined functions.
 *                                                                                               
 * 
 */
@@ -110,7 +110,7 @@ namespace fp
 		* at a given location.
 		* @param x : x-coordinate of the robot.
 		* @param y : y-coordinate of the robot.
-		* @param direction : Current direction of the wall.
+		* @param Direction : Current direction of the wall.
 		* @return none
 		*/
 		static void setWall(int x, int y, char direction);
@@ -119,7 +119,7 @@ namespace fp
 		* the wall at the given location.
 		* @param x : x-coordinate of the robot.
 		* @param y : y-coordinate of the robot.
-		* @param direction : Current direction of the wall.
+		* @param Direction : Current direction of the wall.
 		* @return none
 		*/
 		static void clearWall(int x, int y, char direction);
@@ -186,7 +186,7 @@ namespace fp
 		*/
 		static void ackReset();
 		/**
-		* @brief It is a constructor of a class named API 
+		* @brief It is a constructor of a class named API. It is a
 		* no param constructor.
 		* @param none
 		* @return none

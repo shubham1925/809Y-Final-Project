@@ -47,31 +47,37 @@ namespace fp
 
 	public:
 			/**
-			* @brief It is a 3 parameter constructor of the class named LandBasedRobot
+			* @brief It is a 9 parameter constructor of the class named LandBasedRobot
 			* and it initialises name_, x_ and y_
 			* @param name
+			* @param speed
+			* @param width
+			* @param length
+			* @param height
+			* @param capacity 
 			* @param x
 			* @param y
+			* @param direction
 			* @return none
 			*/
 			LandBasedRobot(std::string name = "mouse", double speed = 0, double width = 0, double length = 0, double height = 0, double capacity = 0, int x = 0, int y = 0, char direction = 'o')
 			:name_{name}, speed_{speed}, width_{width}, length_{length}, height_{height}, capacity_ {capacity}, x_{x}, y_{y}, direction_{direction} {}
 			/**
-			* @brief It is a virtual function of class LandBasedTracked 
+			* @brief It is a pure virtual function of class LandBasedTracked 
 			* and it has no parameter. It is used to obtain the current robot direction.
 			* @param none
 			* @return none
 			*/
 			virtual char GetDirection() = 0;
 			/**
-			* @brief It is a virtual function of class LandBasedTracked 
+			* @brief It is a pure virtual function of class LandBasedTracked 
 			* and it has no parameter. It is used to move the robot forward.
 			* @param none
 			* @return none
 			*/
 			virtual void MoveForward() = 0;
 			/**
-			* @brief It is a virtual function of class LandBasedTracked 
+			* @brief It is a pure virtual function of class LandBasedTracked 
 			* and it has no parameter. It is used to turn the robot in the 
 			* left direction.
 			* @param none
@@ -79,7 +85,7 @@ namespace fp
 			*/
 			virtual void TurnLeft() = 0;
 			/**
-			* @brief It is a virtual function of class LandBasedTracked 
+			* @brief It is a pure virtual function of class LandBasedTracked 
 			* and it has no parameter. It is used to turn the robot in the 
 			* right direction.
 			* @param none
@@ -87,14 +93,14 @@ namespace fp
 			*/
 			virtual void TurnRight() = 0;
 			/**
-			* @brief It is a virtual function of class LandBasedTracked 
+			* @brief It is a pure virtual function of class LandBasedTracked 
 			* and it has no parameter. It is used to turn the robot around.
 			* @param none
 			* @return none
 			*/
 			virtual void TurnAround() = 0;
 			/**
-			* @brief It is a function of class LandBasedTracked 
+			* @brief It is a getter of class LandBasedTracked 
 			* and it has no input parameter. It is used to obtain
 			* the x-coordinate of the robot.
 			* @param none
@@ -105,7 +111,7 @@ namespace fp
 				return x_;
 			}
 			/**
-			* @brief It is a function of class LandBasedTracked 
+			* @brief It is a getter of class LandBasedTracked 
 			* and it has no input parameter. It is used to obtain the 
 			* y-coordinate of the robot.
 			* @param none
@@ -115,6 +121,12 @@ namespace fp
 			{
 				return y_;
 			}
+			/**
+			* @brief It is a virtual destructor of class LandBasedRobot 
+			* that destroys the object created.
+			* @param none
+			* @return none
+			*/
 			virtual ~LandBasedRobot() {}
 	};
 

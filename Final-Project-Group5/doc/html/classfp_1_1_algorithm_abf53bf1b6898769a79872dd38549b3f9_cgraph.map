@@ -1,0 +1,6 @@
+<map id="fp::Algorithm::SolveDFS" name="fp::Algorithm::SolveDFS">
+<area shape="rect" id="node1" title="This is a function that implements Depth First Search Algorithm." alt="" coords="5,56,169,83"/>
+<area shape="rect" id="node2" href="$classfp_1_1_algorithm.html#a94ff0e3e0ffe539c7fa863003fc1e906" title="&#45;This is a boolean function to check if the Goal is reached." alt="" coords="218,5,387,32"/>
+<area shape="rect" id="node3" href="$classfp_1_1_algorithm.html#ab93794edf5f04ad4418fb6aa8cd8233f" title="This function is used to move the robot through the maze." alt="" coords="217,56,388,83"/>
+<area shape="rect" id="node4" href="$classfp_1_1_a_p_i.html#a5a7c59cffb4ca483e8c1334a99a04dbb" title="It is a function of class API. It is used to set the color of the coordinate block of the maze in the..." alt="" coords="436,81,556,108"/>
+</map>

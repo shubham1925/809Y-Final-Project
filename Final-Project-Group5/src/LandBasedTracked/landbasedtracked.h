@@ -41,15 +41,21 @@ namespace fp
 	public:
 
 			/**
-			* @brief This is a 3 parameter constructor of the class named LandBasedTracked
-			* and it initialises name_, x_, y_
+			* @brief This is a 10 parameter constructor of the class named LandBasedTracked.
+			* @param track_
 			* @param name
+			* @param speed
+			* @param width
+			* @param length
+			* @param height
+			* @param capacity 
 			* @param x
 			* @param y
+			* @param direction
 			* @return none
 			*/
-			LandBasedTracked(std::string track_ty = "track", std::string name = "MicroMouse", double speed = 0, double width = 0, double length = 0, double height = 0, double capacity = 0, int x = 0, int y = 0, char direction = 'o')
-			:LandBasedRobot(name, speed, width, length, height, capacity, x, y, direction), track_type{track_ty}{}
+			LandBasedTracked(std::string track_= "track", std::string name = "MicroMouse", double speed = 0, double width = 0, double length = 0, double height = 0, double capacity = 0, int x = 0, int y = 0, char direction = 'o')
+			:LandBasedRobot(name, speed, width, length, height, capacity, x, y, direction), track_type{track_}{}
 			
 			/**
 			* @brief It is a virtual function of class LandBasedTracked 
@@ -89,7 +95,7 @@ namespace fp
 			*/
 			virtual void TurnAround() override;
 			/**
-			* @brief It is a function of class LandBasedTracked 
+			* @brief It is a getter of class LandBasedTracked 
 			* and it has no input parameter. It is used to obtain
 			* the x-coordinate of the robot.
 			* @param none
@@ -100,11 +106,11 @@ namespace fp
 				return x_;
 			}
 			/**
-			* @brief It is a function of class LandBasedTracked 
+			* @brief It is a getter of class LandBasedTracked 
 			* and it has no input parameter. It is used to obtain the 
 			* y-coordinate of the robot.
 			* @param none
-			* @return none
+			* @return The y-coordinate of the robot
 			*/
 			int get_y()
 			{

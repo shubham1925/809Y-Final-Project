@@ -1,5 +1,5 @@
 /**
- * @file landbasedrobot.h
+ * @file main.cpp
  * @authors
  * Group 5 
 * 
@@ -20,10 +20,10 @@
 *
 * @section DESCRIPTION
 * 
-* This is an abstract class whose attributes and methods are used by 
-* the derived classes, namely LandBasedWheeled and LandBasedTracked.
-*                                                                                               
-* 
+* This is a program to drive a robot through a maze using Depth First Search as it's 
+* path-planning algorithm. The program is interfaced with Micromouse simulator for visualizing 
+* the maze and the robot in real-time.The concepts of object-oriented programming, inheritance, 
+* and dynamic polymorphism were used to develop this project.
 */
 #include <iostream>
 #include <memory>
@@ -35,13 +35,9 @@
 
 int main()
 {
-    // Land Based Wheeled robot smart pointer
-    // Parameters wheel_number, name, speed, width, length, height, capacity, x, y, direction
-	/**
-	* @brief ------------------????
-	* @param none
-	* @return none
-	*/
+    // Smart pointer to LandVasedWheeled class.
+    // Parameters wheel_, name, speed, width, length, height, capacity, x, y, direction.
+	
     std::shared_ptr<fp::LandBasedRobot> MicroMouse = std::make_shared<fp::LandBasedWheeled>(2, "MicroMouse", 0, 5, 5, 5, 0, 0, 0, 'N');
     
 	// Algorithm class object

@@ -38,15 +38,21 @@ namespace fp
 
 	public:
 			/**
-			* @brief It is a 3 parameter constructor of a class named LandBasedWheeled 
-			* that initialises name_, x_, y_
+			* @brief It is a 10 parameter constructor of a class named LandBasedWheeled.
+			* @param wheel_
 			* @param name
+			* @param speed
+			* @param width
+			* @param length
+			* @param height
+			* @param capacity 
 			* @param x
 			* @param y
+			* @param direction
 			* @return none
 			*/
-			LandBasedWheeled(int wheel_num = 2, std::string name = "MicroMouse", double speed = 0, double width = 0, double length = 0, double height = 0, double capacity = 0, int x = 0, int y = 0, char direction = 'o' )
-			:LandBasedRobot(name, speed, width, length, height, capacity, x, y, direction), wheel_number{wheel_num}{}
+			LandBasedWheeled(int wheel_ = 2, std::string name = "MicroMouse", double speed = 0, double width = 0, double length = 0, double height = 0, double capacity = 0, int x = 0, int y = 0, char direction = 'o' )
+			:LandBasedRobot(name, speed, width, length, height, capacity, x, y, direction), wheel_number{wheel_}{}
 			/**
 			* @brief It is a virtual function of class LandBasedTracked 
 			* and it has no parameter. It is used to obtain the current robot direction.
@@ -84,24 +90,38 @@ namespace fp
 			* @return none
 			*/
 			virtual void TurnAround() override;
-			
-			
 			/**
-			* @brief It is a function of class LandBasedTracked 
+			* @brief It is a function of class LandBasedTracked.
+			It is used to change the speed of the robot.
+			* @param Speed of the robot
+			* @return none.
+			* 
+			*/
+			void SpeedUp(int);
+			/**
+			* @brief It is a getter of class LandBasedTracked 
 			* and it has no input parameter. It is used to obtain
 			* the x-coordinate of the robot.
 			* @param none
 			* @return The x-coordinate of the robot.
+			* 
 			*/
+			
 			int get_x() const;
 			/**
-			* @brief It is a function of class LandBasedTracked 
+			* @brief It is a getter of class LandBasedTracked 
 			* and it has no input parameter. It is used to obtain the 
 			* y-coordinate of the robot.
 			* @param none
 			* @return none
 			*/
 			int get_y() const; 
+			/**
+			* @brief It is a virtual destructor of class LandBasedWheeled
+			* that destroys the object created.
+			* @param none
+			* @return none
+			*/
 			virtual ~LandBasedWheeled() {}
 
 	};

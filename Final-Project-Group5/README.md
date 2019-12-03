@@ -1,8 +1,8 @@
 # Final-Project-Group5
 
-This is a program to drive a robot through a maze using Depth First Search as it's path-planning algorithm. The program is interfaced with Micromouse simulator for visualizing the maze and the robot in real-time.The concepts of object-oriented programming, inheritance, and polymorphism were used to develop this project.
+This is a program to drive a robot through a maze using Depth First Search as it's path-planning algorithm. The program is interfaced with Micromouse simulator for visualizing the maze and the robot in real-time.The concepts of object-oriented programming, inheritance, and dynamic polymorphism were used to develop this project.
 
-///////It is currently hosted on GitHub at https://github.com/kulbir-ahluwalia/RWA3_Developing_structure_using_OOP///////
+It is currently hosted on GitHub at https://github.com/kulbir-ahluwalia/809Y-Final-Project
 
 Overview
 =====================================================================================
@@ -14,7 +14,7 @@ Steps to run this program:-
 2. Build the simulator using the following command: /user# cd mms/src
                                                     /user# qmake && make
 
-3. Run the simulator using the following command: ../../bin# ./mms
+3. Run the simulator using the following command: ../bin/mms
 
 4. Parameters to be changed in the simulator:-
 
@@ -30,7 +30,7 @@ Steps to run this program:-
 
 Output of the program is :-
 
-![Output of the program](/home/kartik/Documents/FinalProjectGroup5/Final-Project-Group5/FinalProject_Output.gif)
+![Output of the program](/home/kartik/Documents/gg/Final-Project-Group5/Final-Project-Group5/FinalProject_Output.gif/)
 
 
 

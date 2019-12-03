@@ -1,0 +1,5 @@
+<map id="fp::Maze::Maze" name="fp::Maze::Maze">
+<area shape="rect" id="node1" title="This constructor is used to initialize all the walls to zero." alt="" coords="5,31,119,57"/>
+<area shape="rect" id="node2" href="$classfp_1_1_a_p_i.html#a5a7c59cffb4ca483e8c1334a99a04dbb" title="It is a function of class API. It is used to set the color of the coordinate block of the maze in the..." alt="" coords="167,5,287,32"/>
+<area shape="rect" id="node3" href="$classfp_1_1_a_p_i.html#a4635f5c0c48d2ab53f4436be402c5566" title="It is a function of class API. It is used to assign text to coordinate on the maze...." alt="" coords="169,56,284,83"/>
+</map>

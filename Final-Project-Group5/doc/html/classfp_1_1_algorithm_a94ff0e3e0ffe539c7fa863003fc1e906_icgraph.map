@@ -1,0 +1,4 @@
+<map id="fp::Algorithm::CheckGoal" name="fp::Algorithm::CheckGoal">
+<area shape="rect" id="node1" title="&#45;This is a boolean function to check if the Goal is reached." alt="" coords="217,5,387,32"/>
+<area shape="rect" id="node2" href="$classfp_1_1_algorithm.html#abf53bf1b6898769a79872dd38549b3f9" title="This is a function that implements Depth First Search Algorithm." alt="" coords="5,5,169,32"/>
+</map>
