@@ -30,7 +30,7 @@ Steps to run this program:-
 
 Output of the program is :-
 
-![Output of the program](/home/kartik/Documents/gg/Final-Project-Group5/Final-Project-Group5/FinalProject_Output.gif/)
+[Output of the program](/Final-Project-Group5/FinalProject_Output.gif/)
 
 
 
