@@ -40,25 +40,25 @@ namespace fp
 			* @param none
 			* @return none
 			*/
-			std::array<std::array<int, 16>, 16> NorthWall;
+			// std::array<std::array<int, 16>, 16> NorthWall;
 			/**
 			* @brief 2D array of size 16*16 to store the East wall
 			* @param none
 			* @return none
 			*/
-			std::array<std::array<int, 16>, 16> EastWall;
+			// std::array<std::array<int, 16>, 16> EastWall;
 			/**
 			* @brief 2D array of size 16*16 to store the South wall
 			* @param none
 			* @return none
 			*/
-			std::array<std::array<int, 16>, 16> SouthWall;
+			// std::array<std::array<int, 16>, 16> SouthWall;
 			/**
 			* @brief 2D array of size 16*16 to store the West wall
 			* @param none
 			* @return none
 			*/
-			std::array<std::array<int, 16>, 16> WestWall;
+			// std::array<std::array<int, 16>, 16> WestWall;
 				
 		public:
 			/**
@@ -118,6 +118,11 @@ namespace fp
 			* @return none
 			*/
 			~Maze() {}
+
+			std::array<std::array<int, 16>, 16> NorthWall;
+			std::array<std::array<int, 16>, 16> EastWall;
+			std::array<std::array<int, 16>, 16> SouthWall;
+			std::array<std::array<int, 16>, 16> WestWall;
 
 	};
 
