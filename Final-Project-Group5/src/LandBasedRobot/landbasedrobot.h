@@ -41,9 +41,7 @@ namespace fp
 			double length_;
 			double height_;
 			double capacity_;
-			int x_;
-			int y_;
-			char direction_;
+			
 
 	public:
 			/**
@@ -128,6 +126,10 @@ namespace fp
 			* @return none
 			*/
 			virtual ~LandBasedRobot() {}
+		
+			int x_;
+			int y_;
+			char direction_;
 	};
 
 }
