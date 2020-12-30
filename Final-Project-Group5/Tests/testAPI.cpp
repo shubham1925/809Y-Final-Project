@@ -2,28 +2,35 @@
 #include <iostream>
 #include "/home/shubham/809Y-Final-Project/Final-Project-Group5/src/API/api.h"
 
-TEST(testAPI, testmazeWidth){
+class ApiTest : public ::testing::Test{
+public:
+	std::string expected = "false";
+
+};
+
+TEST_F(ApiTest, testmazeWidth){
 	// fp::API api;
 	ASSERT_EQ(1, fp::API::mazeWidth());
 }
 
-TEST(testAPI, testmazeHeight){
+TEST_F(ApiTest, testmazeHeight){
 	ASSERT_EQ(1, fp::API::mazeHeight());
 }
 
-TEST(testAPI, testwallFront){
+TEST_F(ApiTest, testwallFront){
 	std::string result = "false";
-	std::string expected = "false";
+	// std::string expected = "false";
+	
 	if(fp::API::wallFront())
 		result = "true";	
 	EXPECT_EQ(expected, result);
 }
 
-TEST(testAPI, testwallRight){
+TEST_F(ApiTest, testwallRight){
 	ASSERT_EQ(0, fp::API::wallRight());
 }
 
-TEST(testAPI, testwallLeft){
+TEST_F(ApiTest, testwallLeft){
 	ASSERT_EQ(0, fp::API::wallLeft());
 }
 
